@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+21244,1,155,13089,60,38,3,4,0,0,0,0,0,0,c Aviwe Mgijima b Kleinveldt
+21244,1,155,8517,4,9,0,0,0,0,0,0,0,0,c Duminy b Kleinveldt
+21244,1,155,7668,34,22,6,0,4.0,1,35,0,0,1,c Janneman Malan b J Smith
+21244,1,155,13515,6,8,0,0,0,0,0,0,0,0,c Dane Paterson b Kleinveldt
+21244,1,155,13667,35,21,2,2,0,0,0,0,0,0,b Ferisco Adams
+21244,1,155,9735,5,6,0,0,0,0,0,0,0,0,c Janneman Malan b Dane Paterson
+21244,1,155,14429,6,7,1,0,1.0,0,6,1,0,1,c Aviwe Mgijima b Kleinveldt
+21244,1,155,8094,10,6,0,1,4.0,0,37,2,0,0,not out
+21244,1,155,10172,5,3,1,0,4.0,0,19,2,0,1,not out
+21244,1,155,13321,0,0,0,0,4.0,0,33,1,0,0,Did not bat
+21244,1,155,11208,0,0,0,0,3.0,0,21,2,0,0,Did not bat
+21244,2,101,14265,73,39,7,4,0,0,0,0,0,0,c Lutho Sipamla b Birch
+21244,2,101,13067,14,10,2,0,0,0,0,0,0,0, b Lutho Sipamla
+21244,2,101,211,0,6,0,0,4.0,0,25,0,0,0,c Marco Marais b Magala
+21244,2,101,11209,23,22,0,1,0,0,0,0,0,0,c Jade de Klerk b Lutho Sipamla
+21244,2,101,9587,6,5,0,0,2.0,0,16,1,0,0, b Jade de Klerk
+21244,2,101,9766,3,7,0,0,0,0,0,0,0,0,c Gihahn Cloete b Birch
+21244,2,101,10194,14,16,0,0,4.0,0,27,1,0,1,c Sinethemba Qeshile b Onke Nyaku
+21244,2,101,1627,10,10,0,0,4.0,0,33,4,0,0,c Lutho Sipamla b Magala
+21244,2,101,9702,5,4,0,0,3.0,0,26,1,0,0,not out
+21244,2,101,11914,0,1,0,0,2.0,0,27,0,0,0,not out
+21244,2,101,11872,0,0,0,0,1.0,0,12,0,0,0,Did not bat

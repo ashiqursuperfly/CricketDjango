@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22455,1,59,74,9,9,1,0,0,0,0,0,0,0,c Lamichhane b Chris Morris
+22455,1,59,1413,41,33,1,2,0,0,0,0,0,0,c Shreyas Iyer b Rabada
+22455,1,59,370,17,16,1,1,0,0,0,0,0,0,c Ingram b Rabada
+22455,1,59,8989,15,17,0,1,0,0,0,0,0,0,c Rahul Tewatia b Axar
+22455,1,59,6692,32,18,1,3,4.0,0,22,1,0,0,st Pant b Lamichhane
+22455,1,59,8351,19,12,4,0,0,0,0,0,0,0,c Pant b Rabada
+22455,1,59,8281,0,1,0,0,3.0,0,27,1,0,1,c Pant b Rabada
+22455,1,59,1057,9,9,0,0,2.0,0,24,1,0,2,not out
+22455,1,59,10808,1,5,0,0,1.5,0,14,1,0,0,lbw b Chris Morris
+22455,1,59,7910,1,1,0,0,4.0,0,36,0,0,2,not out
+22455,1,59,9715,0,0,0,0,4.0,0,24,2,1,1,Did not bat
+22455,2,61,12094,28,22,5,0,0,0,0,0,0,0,c Akshdeep Nath b Negi
+22455,2,61,1446,0,1,0,0,0,0,0,0,0,0,c Navdeep Saini b Southee
+22455,2,61,9428,67,50,8,2,0,0,0,0,0,0,c Chahal b Navdeep Saini
+22455,2,61,7664,22,21,2,1,0,0,0,0,0,0,lbw b Moeen
+22455,2,61,10744,18,14,2,0,0,0,0,0,0,0,c Southee b Siraj
+22455,2,61,8333,0,3,0,0,4.0,0,28,2,1,1,c de Villiers b Navdeep Saini
+22455,2,61,8808,4,1,1,0,4.0,0,22,1,0,0,not out
+22455,2,61,9693,1,2,0,0,0,0,0,0,0,0,not out
+22455,2,61,9585,0,0,0,0,4.0,0,21,4,0,1,Did not bat
+22455,2,61,702,0,0,0,0,4.0,0,31,0,0,1,Did not bat
+22455,2,61,11158,0,0,0,0,4.0,0,46,1,0,0,Did not bat

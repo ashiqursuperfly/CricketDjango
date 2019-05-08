@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22460,1,64,1447,14,11,3,0,0,0,0,0,0,0,lbw b D Chahar
+22460,1,64,2258,23,10,4,1,0,0,0,0,0,0,c Rayudu b SN Thakur
+22460,1,64,8271,6,6,1,0,0,0,0,0,0,0,c (sub)D Shorey b Santner
+22460,1,64,2250,15,22,1,0,0,0,0,0,0,0,c Rayudu b Ravindra Jadeja
+22460,1,64,9012,10,12,1,0,0,0,0,0,0,0,c Kedar Jadhav b Ravindra Jadeja
+22460,1,64,6557,28,26,1,0,3.0,0,39,2,1,3,b D Chahar
+22460,1,64,12305,16,14,2,0,3.0,0,24,0,0,0,c Dhoni b SN Thakur
+22460,1,64,11540,13,12,1,0,4.0,1,19,1,0,0,not out
+22460,1,64,9746,19,7,2,1,4.0,0,31,0,0,0,not out
+22460,1,64,6327,0,0,0,0,3.0,0,23,1,0,0,Did not bat
+22460,1,64,1451,0,0,0,0,3.0,1,14,1,0,0,Did not bat
+22460,2,58,158,0,4,0,0,0,0,0,0,0,0, b D Kulkarni
+22460,2,58,7825,7,10,0,0,0,0,0,0,0,0,c R Tripathi b Unadkat
+22460,2,58,413,4,4,1,0,0,0,0,0,0,0,run out (Jofra Archer) 
+22460,2,58,6311,57,47,2,3,0,0,0,0,0,0,c Shreyas Gopal b Stokes
+22460,2,58,1851,1,6,0,0,0,0,0,0,0,0,c Stokes b Jofra Archer
+22460,2,58,265,58,43,2,3,0,0,0,0,0,0, b Stokes
+22460,2,58,587,9,4,0,1,4.0,0,20,2,0,0,not out
+22460,2,58,10100,10,3,0,1,4.0,0,25,1,0,5,not out
+22460,2,58,7836,0,0,0,0,4.0,0,33,2,0,0,Did not bat
+22460,2,58,8683,0,0,0,0,4.0,0,44,2,0,1,Did not bat
+22460,2,58,6667,0,0,0,0,4.0,0,28,0,0,0,Did not bat

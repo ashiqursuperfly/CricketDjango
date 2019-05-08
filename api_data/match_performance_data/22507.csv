@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22507,1,61,1465,8,9,1,0,0,0,0,0,0,0,c Shreyas Iyer b Ishant
+22507,1,61,1457,36,19,1,4,0,0,0,0,0,0,c Keemo Paul b A Mishra
+22507,1,61,1836,30,36,3,0,0,0,0,0,0,0,c Sherfane Rutherford b Keemo Paul
+22507,1,61,6326,28,27,2,0,0,0,0,0,0,0,b Ishant
+22507,1,61,8204,25,11,2,2,0,0,0,0,0,0,c Axar b Boult
+22507,1,61,3007,20,13,3,1,4.0,0,29,0,0,0,c Axar b Keemo Paul
+22507,1,61,9427,4,4,0,0,1.0,0,13,1,0,1,run out (Pant)
+22507,1,61,10738,0,1,0,0,4.0,1,15,2,0,1,c Pant b Keemo Paul
+22507,1,61,1726,0,0,0,0,4.0,0,42,2,0,2,not out
+22507,1,61,10267,1,1,0,0,4.0,0,41,0,0,0,not out
+22507,1,61,10952,0,0,0,0,2.5,0,24,2,0,1,Did not bat
+22507,2,255,12094,56,38,6,2,0,0,0,0,0,0,c Vijay Shankar b Khaleel Ahmed
+22507,2,255,1446,17,16,3,0,0,0,0,0,0,0,st Saha b Deepak Hooda
+22507,2,255,9428,8,10,1,0,0,0,0,0,0,0,c Saha b Khaleel Ahmed
+22507,2,255,10744,49,21,2,5,0,0,0,0,0,0,c Nabi b Bhuvneshwar
+22507,2,255,8085,14,13,1,1,0,0,0,0,0,0,lbw b Rashid Khan
+22507,2,255,8808,0,3,0,0,4.0,0,30,0,0,0,c Saha b Rashid Khan
+22507,2,255,13748,9,12,0,1,1.0,0,11,0,0,1,c Nabi b Bhuvneshwar
+22507,2,255,11214,5,4,1,0,4.0,0,32,3,1,5,not out
+22507,2,255,1454,1,2,0,0,4.0,0,16,1,0,0,obs
+22507,2,255,8117,0,0,0,0,3.0,0,37,1,0,1,not out
+22507,2,255,702,0,0,0,0,4.0,0,34,2,0,0,Did not bat

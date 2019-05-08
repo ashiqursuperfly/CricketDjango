@@ -1,0 +1,333 @@
+<style xmlns="http://www.w3.org/1999/html">
+    body {
+        background-color: white;
+    }
+
+    b {
+        color: darkblue;
+    }
+
+    label {
+        color: darkblue;
+        font-size: 30px;
+        text-align: center;
+        font-family: Consolas, sans-serif;
+    }
+
+    h1 {
+        color: darkblue;
+        text-align: center;
+        font-size: 40px;
+        font-family: Consolas, sans-serif;
+    }
+
+    h2 {
+        color: darkblue;
+        text-align: left;
+        font-size: 20px;
+        font-family: Consolas, sans-serif;
+    }
+
+    ul {
+        color: black;
+        font-size: 25px;
+        font-family: Consolas, sans-serif;
+    }
+
+    textarea {
+        background: black;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        height: 100px;
+        width: 2000px;
+    }
+
+    input[type="text"] {
+        font-size: 15px;
+        font-family: Consolas, sans-serif;
+    {#word-wrap: break-spaces;#}{#word-break: break-all;#} width: 2000px;
+        wrap-option: hard;
+        white-space: pre-wrap;
+        height: 50px;
+    }
+
+    input[type="submit"] {
+        font-size: 25px;
+        font-family: Consolas, sans-serif;
+        background: rgb(3, 169, 244);
+        color: white;
+    {#word-wrap: break-spaces;#}{#word-break: break-all;#} width: 200px;
+        wrap-option: hard;
+        white-space: pre-wrap;
+        height: 50px;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRICKET DATABASE</title>
+</head>
+<body>
+<h3 style="font-size: xx-large; text-align: center; font-family: 'Comic Sans MS',sans-serif; color: darkblue">WELCOME TO
+    CRICKET DATABASE</h3>
+<ul><b>SCHEMA</b></ul>
+<ul><b>Teams</b><br>(TeamID, Name, League)</ul>
+<ul><b>Series</b><br>(SeriesID, Series Name, MOTS, Winner)</ul>
+<ul><b>Match</b><br>(MatchID, MatchType, Captain1, Captain2, Team1ID, Team2ID,score1,score2,score3,score4, Venue,
+    Date,Winner,
+    MOTM, SeriesID,TotalRunsTeam1,TotalRunsTeam2)
+</ul>
+<ul><b>TeamsPlaysInSeries</b><br>(TeamID, SeriesID)</ul>
+<ul><b>UmpiresConductsMatch</b><br>(PlayerID, MatchID, UmpiringRole)</ul>
+<ul><b>Player</b><br>(PlayerID, Nationality, DateOfBirth, First Name, Last Name,PlayerRole,BattingStyle, BowlingStyle)
+</ul>
+<ul><b>PlayerRanking</b><br>(Rank, Match Format, Criteria, Points, PlayerID)</ul>
+<ul><b>TeamRanking</b><br>(Rank, Match Format, Points, TeamID)</ul>
+<ul><b>Umpire</b><br>(PlayerID, ODI umpired, Tests umpired, T20 umpired)</ul>
+<ul><b>Coach</b><br>(PlayerId, First Name, Last Name, Coaching Role, TeamID)</ul>
+<ul><b>PlayerPlaysForTeam</b><br>(PlayerID, TeamID)</ul>
+<ul><b>MatchPerformanceRELATION</b><br>(match_id,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,
+    overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition )
+</ul>
+<ul><b>ByBallPerformanceRELATION</b><br>(PlayerID, TeamId, MatchID, Over Number, Ball Number, Balling
+    Violation Type, Wicket Taking Fielder, Outed Batsman, Commentary, Second Batsman, Batsman, RunsScored, Wicket Type,
+    isFreeHit)
+</ul>
+<br>
+<h1>SIMPLE QUERIES</h1>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>1.Find the teams that are playing in a specific series:</b><br>
+        <textarea readonly rows="4" cols="70">Select team_name from teams where team_id in (select team_id from teams_plays_in_series where series_id = (select series_id from series where lower(series_name) like lower(input:series_name)));</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="Select team_name from teams where team_id in (select team_id from teams_plays_in_series where series_id = (select series_id from series where lower(series_name) like lower('Bangladesh Premier League 2019')));">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>2.Get All Teams that play in a specific league:</b><br>
+        <textarea readonly rows="4" cols="70">Select team_id, team_name FROM teams WHERE LOWER(league) like lower(input:league_name); </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="Select team_id, team_name FROM teams WHERE LOWER(league) like lower('international');">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>3.Get Team rankings for a specific format:</b><br>
+        <textarea readonly rows="4" cols="70">select team_name, points from teams, team_ranking where teams.team_id = team_ranking.team_id and lower(match_format) like lower(input:match_format) order by points;</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select team_name, points from teams, team_ranking where teams.team_id = team_ranking.team_id and lower(match_format) like lower('t20') order by points;">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>4.Get Player ranking for specific format and criteria</b><br>
+        <textarea readonly rows="4" cols="70">select full_name, points from players, player_ranking where players.player_id = player_ranking.player_id and lower(match_format) like lower(input:match_format) and lower(criteria) like lower(input:criteria) order by points; </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select full_name, points from players, player_ranking where players.player_id = player_ranking.player_id and lower(match_format) like lower('test') and lower(criteria) like lower('batting') order by points; ">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>5.Find umpires that conducted a specific match</b><br>
+        <textarea readonly rows="4" cols="70">select full_name, umpiring_role from players, umpires_conducts_match where players.player_id = umpires_conducts_match.player_id and match_id = input:match_id;</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select full_name, umpiring_role from players, umpires_conducts_match where players.player_id = umpires_conducts_match.player_id and match_id = 21615;">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>6.Find coaches of a specific team</b><br>
+        <textarea readonly rows="4" cols="70">select * from players where player_id in (select player_id from coaches where team_id = input:team_id); </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select full_name from players where player_id in (select player_id from coaches where team_id = 11);">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>7.Find performance of a specific player in a certain match</b><br>
+        <textarea readonly rows="4" cols="70">Select * From match_performance_data where match_id = input:match_id and player_id in (select player_id from players where full_name ilike input:player_name);</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="Select * From match_performance_data where match_id = 21615 and player_id in (select player_id from players where full_name ilike 'Tamim Iqbal');">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>8.Find Winner of a Series</b><br>
+        <textarea readonly rows="4" cols="70">SELECT * from series,teams where series_id = input:series_id and team_id = winner;</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="SELECT * from series,teams where series_id = 2772 and team_id = winner;">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>9.Find all teams that a player play for</b><br>
+        <textarea readonly rows="4" cols="70">select get_player_name(player_id),team_id from player_plays_for_teams natural join teams where player_id = input:player_id</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select get_player_name(player_id),team_id from player_plays_for_teams natural join teams where player_id = 9129">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>10. Find commentary of a specific ball in a specific match</b><br>
+        <textarea readonly rows="4" cols="70">select commentary from ball_by_ball_performance_data where match_id = 222 and over_number = 1 and ball_number = 1 and innings_no = 2; </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select commentary from ball_by_ball_performance_data where match_id = 222 and over_number = 1 and ball_number = 1 and innings_no = 2; ">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>11.Get All Teams a player play for:</b><br>
+        <textarea readonly rows="4" cols="70"> select get_player_name(players.player_id), team_name from players, teams, player_plays_for_teams where players.player_id = 612 and teams.team_id = player_plays_for_teams.team_id and players.player_id = player_plays_for_teams.player_id;</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value=" select get_player_name(players.player_id), team_name from players, teams, player_plays_for_teams where players.player_id = 612 and teams.team_id = player_plays_for_teams.team_id and players.player_id = player_plays_for_teams.player_id;">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+
+<h1>COMPLEX QUERIES</h1>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><b><br>1. Get complete scoreboard of a match<br></b>
+        <textarea readonly rows="4" cols="70">select (select team_name from teams where matchtable2.team_id = teams.team_id), sum(runs_scored) as runs, sum(balls_batted)::float / 6.00 as overs, (select sum(wickets_taken) from match_performance_data where matchtable2.team_id != match_performance_data.team_id and matchtable2.match_id = match_performance_data.match_id) as wickets from match_performance_data as matchtable2 where match_id = 21615 group by team_id, match_id; </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select (select team_name from teams where matchtable2.team_id = teams.team_id), sum(runs_scored) as runs, sum(balls_batted)::float / 6.00 as overs, (select count(*) from match_performance_data where matchtable2.team_id = match_performance_data.team_id and matchtable2.match_id = match_performance_data.match_id and (match_performance_data.final_out_condition not ilike 'not out') and (match_performance_data.final_out_condition not ilike 'Did not Bat') ) as wickets from match_performance_data as matchtable2 where match_id = 21615 group by team_id, match_id;">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        <b>2.Find career batting data of a specific playerID for specific match format</b><br>
+        <textarea readonly style="height: 400px" rows="20" cols="70">select player_id, (select sum(runs_scored) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as total_runs, (select count(final_out_condition) from match_performance_data where player_id = 9088 and final_out_condition ilike 'not out' and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as not_outs, (select max(runs_scored) from match_performance_data where player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as high_score, (select sum(match_performance_data.balls_batted) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as balls_faced, (select count(*) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as innings, (select (sum(runs_scored) :: float / sum(balls_batted) :: float) * 100.0 from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as strike_rate, (select avg(match_performance_data.runs_scored) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as average_runs, (select sum(match_performance_data.fours_scored) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as fours_scored, (select sum(sixes_scored) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as sixes_scored, (select coalesce(count(runs_scored), 0) from match_performance_data as centurydata where centurydata.player_id = 9088 and centurydata.runs_scored >= 100 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as centuries, (select coalesce(count(runs_scored), 0) from match_performance_data as centurydata2 where centurydata2.player_id = 9088 and centurydata2.runs_scored >= 50) as half_centuries from match_performance_data as this_match where player_id = 9089 and (select match_type from match where match.match_id = this_match.match_id) ilike 'ODI';</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select get_player_name(player_id), (select sum(runs_scored) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as total_runs, (select count(final_out_condition) from match_performance_data where player_id = 9088 and final_out_condition ilike 'not out' and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as not_outs, (select max(runs_scored) from match_performance_data where player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as high_score, (select sum(match_performance_data.balls_batted) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as balls_faced, (select count(*) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as innings, (select (sum(runs_scored) :: float / sum(balls_batted) :: float) * 100.0 from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as strike_rate, (select avg(match_performance_data.runs_scored) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as average_runs, (select sum(match_performance_data.fours_scored) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as fours_scored, (select sum(sixes_scored) from match_performance_data where match_performance_data.player_id = 9088 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as sixes_scored, (select coalesce(count(runs_scored), 0) from match_performance_data as centurydata where centurydata.player_id = 9088 and centurydata.runs_scored >= 100 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as centuries, (select coalesce(count(runs_scored), 0) from match_performance_data as centurydata2 where centurydata2.player_id = 9088 and centurydata2.runs_scored >= 50) as half_centuries from match_performance_data as this_match where player_id = 9089 and (select match_type from match where match.match_id = this_match.match_id) ilike 'ODI' limit 1; ">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>3.find career bowling data for specific player_id for specific match_format</b><br>
+        <textarea readonly style="height: 500px" rows="20" cols="70">select get_player_name(player_id), (select count(*) from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as matches, (select count(*) from match_performance_data where match_performance_data.player_id = 9089 and match_performance_data.overs_bowled > 0 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as innings, (select sum(match_performance_data.overs_bowled) * 6 from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as balls, (select sum(match_performance_data.runs_conceded) from match_performance_data where player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as runs_conceded, (select sum(match_performance_data.wickets_taken) from match_performance_data where player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as wickets, (select sum(match_performance_data.overs_bowled)::float * 6.0 / sum(match_performance_data.wickets_taken)::float from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as strike_rate, (select sum(match_performance_data.runs_conceded)::float / sum(match_performance_data.wickets_taken)::float from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as bowling_average,
+
+ (select sum(match_performance_data.runs_conceded )::float / sum(match_performance_data.overs_bowled)::float from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as economy, (select sum(match_performance_data.wickets_taken) from match_performance_data where match_performance_data.player_id = 9089 and match_performance_data.wickets_taken = 4 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as four_wickets_taken, (select sum(match_performance_data.wickets_taken) from match_performance_data where match_performance_data.player_id = 9089 and match_performance_data.wickets_taken > 4 and match_performance_data.wickets_taken < 10 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as five_wickets_taken, (select sum(match_performance_data.wickets_taken) from match_performance_data where match_performance_data.player_id = 9089 and match_performance_data.wickets_taken = 10 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as ten_wickets_taken
+
+from match_performance_data as this_match where player_id = 9089 and (select match_type from match where match.match_id = this_match.match_id) ilike 'ODI'; </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select get_player_name(player_id), (select count(*) from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as matches, (select count(*) from match_performance_data where match_performance_data.player_id = 9089 and match_performance_data.overs_bowled > 0 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as innings, (select sum(match_performance_data.overs_bowled) * 6 from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as balls, (select sum(match_performance_data.runs_conceded) from match_performance_data where player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as runs_conceded, (select sum(match_performance_data.wickets_taken) from match_performance_data where player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as wickets, (select sum(match_performance_data.overs_bowled)::float * 6.0 / sum(match_performance_data.wickets_taken)::float from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as strike_rate, (select sum(match_performance_data.runs_conceded)::float / sum(match_performance_data.wickets_taken)::float from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as bowling_average,
+
+ (select sum(match_performance_data.runs_conceded )::float / sum(match_performance_data.overs_bowled)::float from match_performance_data where match_performance_data.player_id = 9089 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as economy, (select sum(match_performance_data.wickets_taken) from match_performance_data where match_performance_data.player_id = 9089 and match_performance_data.wickets_taken = 4 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as four_wickets_taken, (select sum(match_performance_data.wickets_taken) from match_performance_data where match_performance_data.player_id = 9089 and match_performance_data.wickets_taken > 4 and match_performance_data.wickets_taken < 10 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as five_wickets_taken, (select sum(match_performance_data.wickets_taken) from match_performance_data where match_performance_data.player_id = 9089 and match_performance_data.wickets_taken = 10 and (select match_type from match where this_match.match_id = match.match_id) ilike 'ODI') as ten_wickets_taken from match_performance_data as this_match where player_id = 9089 and (select match_type from match where match.match_id = this_match.match_id) ilike 'ODI' limit 1; ">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>4.Find player to win highest number of MOTS for a given year</b><br>
+        <textarea readonly rows="4" cols="70">select count(mots), (select full_name from players where player_id = mots) from series group by mots order by count(mots) desc limit 1;</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select count(mots), (select full_name from players where player_id = mots) from series group by mots order by count(mots) desc limit 1;">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>5.Find the percentage of matches in which a player got to playin team x’s matches for a specific
+        year</b><br>
+        <textarea readonly rows="4" cols="70">select ((select count(*) / 22 from match_performance_data where (match_id = 22248) and get_year_match_played_in(22248) = 2019 group by match_id) / (select count(*) from match_performance_data where match_id = 22248 and get_year_match_played_in(22248) = 2019 and player_id = 9088)) * 100 as percentage, get_player_name(9088) from match_performance_data limit 1; </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select ((select count(*) / 22 from match_performance_data where (match_id = 22248) and get_year_match_played_in(22248) = 2019 group by match_id) / (select count(*) from match_performance_data where match_id = 22248 and get_year_match_played_in(22248) = 2019 and player_id = 9088)) * 100 as percentage, get_player_name(9088) from match_performance_data limit 1; ">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>6.Find highest runs scored by a batsman in his career in one innings for each match type</b><br>
+        <textarea readonly rows="4" cols="70">select (select match_type from match where match.match_id = t.match_id), get_player_name(9089), max(runs_scored) as maximum_runs from match_performance_data as t where player_id = 9089 group by (select match_type from match where match.match_id = t.match_id) ;</textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="select (select match_type from match where match.match_id = t.match_id), get_player_name(9089), max(runs_scored) as maximum_runs from match_performance_data as t where player_id = 9089 group by (select match_type from match where match.match_id = t.match_id) ;">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>7.Get number of matches won by each team in a specific series(standings)</b><br>
+        <textarea readonly rows="4" cols="70">(select count(*) as win_count, (select team_name from teams where team_id = winner) from match where series_id = 2727 group by winner Order by count(*) ) union ( select length('') as win_count, (select team_name from teams where team_id = team1_id) from match where series_id = 2727 and team1_id not in (select winner from match where series_id = 2727) ) union ( select length('') as win_count, (select team_name from teams where team_id = team2_id) from match where series_id = 2727 and team2_id not in (select winner from match where series_id = 2727) ) order by win_count desc ; </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="(select count(*) as win_count, (select team_name from teams where team_id = winner) from match where series_id = 2727 group by winner Order by count(*) ) union ( select length('') as win_count, (select team_name from teams where team_id = team1_id) from match where series_id = 2727 and team1_id not in (select winner from match where series_id = 2727) ) union ( select length('') as win_count, (select team_name from teams where team_id = team2_id) from match where series_id = 2727 and team2_id not in (select winner from match where series_id = 2727) ) order by win_count desc ; ">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br><b>8.Find Complete scorecard</b><br>
+        <textarea readonly rows="4" cols="70">SELECT full_name as "Player", team_name as "Team", innings_no as "Innings", runs_scored, balls_batted, fours_scored, sixes_scored, overs_bowled, maidens, runs_conceded, wickets_taken, no_balls, wides, final_out_condition FROM players, teams, match_performance_data WHERE players.player_id = match_performance_data.player_id AND teams.team_id = match_performance_data.team_id AND match_id = 21615 order by innings_no asc; </textarea><br>
+        Enter Query:<br>
+        <input type="text" name="sql_string" aria-multiline="true"
+               value="SELECT full_name as Player, team_name as Team, innings_no as Innings, runs_scored, balls_batted, fours_scored, sixes_scored, overs_bowled, maidens, runs_conceded, wickets_taken, no_balls, wides, final_out_condition FROM players, teams, match_performance_data WHERE players.player_id = match_performance_data.player_id AND teams.team_id = match_performance_data.team_id AND match_id = 21615 order by innings_no asc; ">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+</body>
+<h1>INPUT BOX FOR TESTING</h1>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+    {% csrf_token %}
+    <label><br>
+        IPL 2019 Leaderboard<br>
+        <textarea> SELECT team_name,"Played",coalesce("Won", 0) as "Won", 2 * coalesce("Won", 0) as "Points"
+FROM (Select team_name,team_id,count(*) as "Won"
+      From match,
+           teams
+      where match.winner = teams.team_id
+        and match.series_id = 2810
+      group by team_name,team_id) X
+       NATURAL RIGHT OUTER JOIN
+     (Select team_name,team_id,count(*) as "Played"
+      From match,
+           teams
+      where (match.team1_id = teams.team_id OR match.team2_id = teams.team_id)
+        and match.series_id = 2810
+      group by team_name,team_id) Y
+order by "Won" desc; </textarea>
+        <input type="text" name="sql_string" aria-multiline="true" value="  ">
+        <input type="submit" value="Run Query"/><br>
+    </label>
+</form>
+</html>

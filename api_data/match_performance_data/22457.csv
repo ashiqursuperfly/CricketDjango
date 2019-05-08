@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22457,1,65,1739,70,62,6,1,0,0,0,0,0,0,not out
+22457,1,65,6507,1,6,0,0,0,0,0,0,0,0,c Ashwin b Mujeeb
+22457,1,65,8204,26,27,2,0,0,0,0,0,0,0,c Rahul b Ashwin
+22457,1,65,3007,12,7,0,0,3.5,0,42,0,0,0,run out (Ashwin)
+22457,1,65,1836,19,15,2,0,0,0,0,0,0,0,c (sub)Nair b Shami
+22457,1,65,9427,14,3,2,1,0,0,0,0,0,0,not out
+22457,1,65,790,0,0,0,0,0,0,0,0,0,0,Did not bat
+22457,1,65,10738,0,0,0,0,4.0,0,20,1,0,0,Did not bat
+22457,1,65,1726,0,0,0,0,4.0,0,25,0,0,0,Did not bat
+22457,1,65,1828,0,0,0,0,4.0,0,42,1,0,0,Did not bat
+22457,1,65,8356,0,0,0,0,4.0,0,21,2,0,0,Did not bat
+22457,2,255,8733,71,53,7,1,0,0,0,0,0,0,not out
+22457,2,255,247,16,14,1,1,0,0,0,0,0,0,c Deepak Hooda b Rashid Khan
+22457,2,255,2195,55,43,3,3,0,0,0,0,0,0,c Vijay Shankar b Sandeep Sharma
+22457,2,255,6349,1,3,0,0,0,0,0,0,0,0,c Deepak Hooda b Sandeep Sharma
+22457,2,255,6319,2,3,0,0,0,0,0,0,0,0,c Deepak Hooda b S Kaul
+22457,2,255,10420,5,3,0,0,4.0,0,30,0,0,0,not out
+22457,2,255,9429,0,0,0,0,0,0,0,0,0,0,Did not bat
+22457,2,255,1593,0,0,0,0,4.0,0,30,1,0,0,Did not bat
+22457,2,255,8924,0,0,0,0,4.0,0,21,0,0,1,Did not bat
+22457,2,255,7909,0,0,0,0,4.0,0,30,1,0,0,Did not bat
+22457,2,255,12071,0,0,0,0,4.0,0,34,1,0,2,Did not bat

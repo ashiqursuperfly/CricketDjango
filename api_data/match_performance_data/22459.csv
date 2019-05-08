@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22459,1,62,8733,100,64,6,6,0,0,0,0,0,0,not out
+22459,1,62,247,63,36,3,7,0,0,0,0,0,0,c Krunal Pandya b Behrendorff
+22459,1,62,6349,7,8,1,0,0,0,0,0,0,0,c de Kock b Hardik Pandya
+22459,1,62,8257,5,6,0,0,0,0,0,0,0,0,c Rahul Chahar b Hardik Pandya
+22459,1,62,10420,8,3,2,0,4.0,0,54,1,0,1,c de Kock b Bumrah
+22459,1,62,6319,7,3,1,0,0,0,0,0,0,0,not out
+22459,1,62,9429,0,0,0,0,0,0,0,0,0,0,Did not bat
+22459,1,62,1593,0,0,0,0,4.0,0,37,1,0,0,Did not bat
+22459,1,62,9493,0,0,0,0,4.0,0,34,0,0,7,Did not bat
+22459,1,62,7909,0,0,0,0,4.0,0,21,3,0,3,Did not bat
+22459,1,62,8924,0,0,0,0,4.0,0,52,1,1,0,Did not bat
+22459,2,65,8520,24,23,2,0,0,0,0,0,0,0,c Miller b Ashwin
+22459,2,65,9218,15,13,1,1,0,0,0,0,0,0, b Shami
+22459,2,65,7915,21,15,4,0,0,0,0,0,0,0,c (sub)Henriques b Sam Curran
+22459,2,65,657,83,31,3,10,0,0,0,0,0,0,c Miller b Rajpoot
+22459,2,65,10276,7,10,1,0,0,0,0,0,0,0,run out (Sam Curran) 
+22459,2,65,9647,19,13,2,0,4.0,0,57,2,0,3,c Miller b Shami
+22459,2,65,11311,1,2,0,0,2.0,0,17,0,0,0,c Miller b Shami
+22459,2,65,11220,15,13,2,0,2.0,0,22,0,0,1,not out
+22459,2,65,12087,1,1,0,0,4.0,0,27,0,0,0,not out
+22459,2,65,7773,0,0,0,0,4.0,0,35,1,0,0,Did not bat
+22459,2,65,9311,0,0,0,0,4.0,0,38,1,0,2,Did not bat

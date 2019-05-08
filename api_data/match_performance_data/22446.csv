@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22446,1,12,13278,8,20,0,0,0,0,0,0,0,0,b K Jarvis
+22446,1,12,9835,0,5,0,0,7.0,0,38,2,0,2,c Maruma b K Jarvis
+22446,1,12,11817,56,88,3,0,0,0,0,0,0,0,c Sean Williams b Tiripano
+22446,1,12,12745,0,4,0,0,0,0,0,0,0,0,c Maruma b K Jarvis
+22446,1,12,9837,72,73,7,2,0,0,0,0,0,0,c K Jarvis b Chatara
+22446,1,12,9832,10,6,0,1,6.0,0,39,0,1,1,c Maruma b Tiripano
+22446,1,12,9829,4,8,0,0,0,0,0,0,0,0,c Sean Williams b K Jarvis
+22446,1,12,14554,0,1,0,0,0,0,0,0,0,0,c Mire b Tiripano
+22446,1,12,12247,1,4,0,0,5.0,0,26,1,0,1,run out (Chakabva)
+22446,1,12,10874,1,2,0,0,7.0,0,40,1,0,2,not out
+22446,1,12,10814,0,0,0,0,7.0,0,42,0,0,0,Did not bat
+22446,2,7,9737,14,17,1,1,0,0,0,0,0,0,c Mustafa b Zahoor Khan
+22446,2,7,781,78,101,5,0,0,0,0,0,0,0,not out
+22446,2,7,6334,13,13,2,0,0,0,0,0,0,0, b Mustafa
+22446,2,7,441,17,20,2,0,7.0,1,24,0,0,2,c Chirag Suri b Mustafa
+22446,2,7,9354,11,9,1,0,6.0,0,41,0,0,0,c Zahoor Khan b Imran Haider
+22446,2,7,10195,45,33,1,3,0,0,0,0,0,0,not out
+22446,2,7,782,0,0,0,0,0,0,0,0,0,0,Did not bat
+22446,2,7,10066,0,0,0,0,7.0,0,34,3,0,2,Did not bat
+22446,2,7,2289,0,0,0,0,7.0,1,16,4,0,1,Did not bat
+22446,2,7,11224,0,0,0,0,1.0,0,16,0,0,1,Did not bat
+22446,2,7,6483,0,0,0,0,7.0,0,35,1,1,7,Did not bat

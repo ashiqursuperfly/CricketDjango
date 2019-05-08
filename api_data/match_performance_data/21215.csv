@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+21215,1,157,13067,0,3,0,0,0,0,0,0,0,0,c Wihan Lubbe b Fortuin
+21215,1,157,314,16,12,1,1,0,0,0,0,0,0,c Hendricks b Wiaan Mulder
+21215,1,157,14265,30,22,4,0,0,0,0,0,0,0,c Hendricks b Siboto
+21215,1,157,11209,26,19,4,0,0,0,0,0,0,0,c Pongolo b Wiaan Mulder
+21215,1,157,10970,7,12,0,0,0,0,0,0,0,0,c Bavuma b Fortuin
+21215,1,157,10187,13,12,1,0,4.0,0,37,1,0,0,c B Hendricks b Pongolo
+21215,1,157,9766,29,22,2,1,0,0,0,0,0,0,not out
+21215,1,157,731,31,17,1,2,4.0,0,35,0,0,0,c Bavuma b B Hendricks
+21215,1,157,1627,0,2,0,0,4.0,1,35,3,1,0,run out (Bavuma)
+21215,1,157,9702,6,1,0,1,4.0,0,30,3,0,0,not out
+21215,1,157,11872,0,0,0,0,4.0,0,26,0,0,1,Did not bat
+21215,2,101,13070,69,43,3,4,0,0,0,0,0,0,c Aviwe Mgijima b George Linde
+21215,2,101,9491,11,14,2,0,0,0,0,0,0,0,c Janneman Malan b Kleinveldt
+21215,2,101,9554,5,7,0,0,0,0,0,0,0,0,c Kleinveldt b Dane Paterson
+21215,2,101,8583,46,35,2,2,0,0,0,0,0,0,c Amla b Kleinveldt
+21215,2,101,11497,28,16,2,2,0,0,0,0,0,0,c Philander b Kleinveldt
+21215,2,101,8651,0,1,0,0,3.0,0,30,0,0,2,c Janneman Malan b Dane Paterson
+21215,2,101,11200,2,2,0,0,3.0,0,28,2,0,0,run out (Dane Paterson) 
+21215,2,101,10675,0,1,0,0,2.0,0,18,1,0,1,not out
+21215,2,101,10676,0,1,0,0,4.0,0,14,2,0,0, b Dane Paterson
+21215,2,101,9708,0,1,0,0,4.0,0,43,1,2,0,not out
+21215,2,101,9490,0,0,0,0,4.0,0,31,1,0,1,Did not bat

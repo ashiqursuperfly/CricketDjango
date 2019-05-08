@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22511,1,446,9163,26,22,2,1,0,0,0,0,0,0,c Veda Krishnamurthy b Ekta Bisht
+22511,1,446,10012,10,10,2,0,0,0,0,0,0,0,c Sushma Verma b Shikha Pandey
+22511,1,446,13658,43,40,5,0,3.0,0,19,1,0,0,c Veda Krishnamurthy b Amelia Kerr
+22511,1,446,9095,5,18,0,0,2.0,0,24,0,0,1,c & b Sushree Pradhan
+22511,1,446,11098,16,16,2,0,4.0,0,14,4,0,0,c Hayley Matthews b Amelia Kerr
+22511,1,446,14482,2,4,0,0,0,0,0,0,0,0,b Ekta Bisht
+22511,1,446,13639,1,3,0,0,0,0,0,0,0,0,not out
+22511,1,446,9101,8,7,1,0,2.0,0,14,0,0,1,not out
+22511,1,446,11096,0,0,0,0,0,0,0,0,0,0,Did not bat
+22511,1,446,11531,0,0,0,0,4.0,0,13,0,0,6,Did not bat
+22511,1,446,11094,0,0,0,0,3.0,0,28,1,0,0,Did not bat
+22511,2,530,11256,5,14,1,0,2.0,0,22,0,0,0, b Deepti Sharma
+22511,2,530,14825,34,31,5,1,0,0,0,0,0,0,c Rajeshwari Gayakwad b Harleen Deol
+22511,2,530,9140,46,35,5,2,0,0,0,0,0,0,c Deepti Sharma b Rajeshwari Gayakwad
+22511,2,530,9072,17,22,1,0,0,0,0,0,0,0, b Deepti Sharma
+22511,2,530,11095,0,1,0,0,0,0,0,0,0,0,run out (Sophie Ecclestone/Ravi Kalpana) 
+22511,2,530,11093,0,0,0,0,0,0,0,0,0,0,not out
+22511,2,530,10015,0,2,0,0,4.0,0,18,1,0,0, b Deepti Sharma
+22511,2,530,11855,0,2,0,0,3.0,0,21,2,0,0, b Deepti Sharma
+22511,2,530,13949,2,1,0,0,3.0,1,14,1,0,0,not out
+22511,2,530,14478,0,0,0,0,4.0,0,23,0,0,0,Did not bat
+22511,2,530,9080,0,0,0,0,4.0,0,13,2,0,0,Did not bat

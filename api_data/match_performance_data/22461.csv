@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22461,1,63,1995,0,1,0,0,0,0,0,0,0,0,b Ishant
+22461,1,63,11808,65,39,7,2,0,0,0,0,0,0,c Axar b Keemo Paul
+22461,1,63,527,28,30,4,1,0,0,0,0,0,0,c Pant b Rabada
+22461,1,63,9204,11,12,0,1,2.0,0,12,1,0,0,b Chris Morris
+22461,1,63,7736,45,21,3,4,3.0,0,29,1,0,0,c Rabada b Chris Morris
+22461,1,63,145,2,3,0,0,0,0,0,0,0,0,c Dhawan b Rabada
+22461,1,63,8110,6,7,0,0,1.0,0,13,0,0,0,c Rahul Tewatia b Keemo Paul
+22461,1,63,466,14,6,2,0,2.5,0,35,0,0,0,not out
+22461,1,63,8292,2,2,0,0,4.0,0,28,0,0,1,not out
+22461,1,63,10692,0,0,0,0,3.0,0,37,0,0,1,Did not bat
+22461,1,63,10551,0,0,0,0,3.0,0,25,1,0,0,Did not bat
+22461,2,61,12094,14,7,0,2,0,0,0,0,0,0,c Karthik b Prasidh
+22461,2,61,1446,97,63,11,2,0,0,0,0,0,0,not out
+22461,2,61,9428,6,6,1,0,0,0,0,0,0,0,c Karthik b A Russell
+22461,2,61,10744,46,31,4,2,0,0,0,0,0,0,c Kuldeep Yadav b Nitish Rana
+22461,2,61,7664,14,6,1,1,0,0,0,0,0,0,not out
+22461,2,61,8333,0,0,0,0,4.0,0,38,2,0,1,Did not bat
+22461,2,61,8808,0,0,0,0,4.0,0,30,0,0,0,Did not bat
+22461,2,61,9693,0,0,0,0,0,0,0,0,0,0,Did not bat
+22461,2,61,11214,0,0,0,0,4.0,0,46,2,1,0,Did not bat
+22461,2,61,9585,0,0,0,0,4.0,0,42,2,0,0,Did not bat
+22461,2,61,702,0,0,0,0,4.0,1,21,1,0,2,Did not bat

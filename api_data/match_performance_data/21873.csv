@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+21873,1,142,2234,58,62,9,0,0,0,0,0,0,0,c Harry Brook b S Patterson
+21873,1,142,13276,112,97,11,3,0,0,0,0,0,0,c A Lyth b J Poysden
+21873,1,142,6495,58,55,4,3,0,0,0,0,0,0,c Jack Leaning b J Poysden
+21873,1,142,8313,36,34,4,1,0,0,0,0,0,0,lbw b Matthew Waite
+21873,1,142,6579,25,17,3,0,0,0,0,0,0,0,c Jack Leaning b Pillans
+21873,1,142,7865,45,25,4,2,0,0,0,0,0,0,not out
+21873,1,142,8011,0,1,0,0,4.0,0,41,1,0,1,lbw b Pillans
+21873,1,142,6725,4,5,0,0,6.0,0,42,0,0,0,b Olivier
+21873,1,142,8632,1,2,0,0,4.4,0,38,2,0,1,b S Patterson
+21873,1,142,6494,0,0,0,0,5.0,0,39,1,0,1,run out (Tattersall)
+21873,1,142,6513,0,1,0,0,5.0,0,15,1,0,0,b Pillans
+21873,2,146,6511,16,12,3,0,0,0,0,0,0,0,c Ricardo Vasconcelos b B Sanderson
+21873,2,146,10033,67,80,6,1,0,0,0,0,0,0, c & b Holland
+21873,2,146,12201,47,38,5,1,0,0,0,0,0,0,c J Cobb b N Buck
+21873,2,146,6679,28,11,2,3,0,0,0,0,0,0,c B Sanderson b R Keogh
+21873,2,146,9411,0,2,0,0,2.0,0,12,0,0,0,c (sub)R Newton b Holland
+21873,2,146,9546,14,5,1,1,0,0,0,0,0,0,not out
+21873,2,146,10441,0,0,0,0,8.0,0,66,1,1,1,not out
+21873,2,146,10688,0,0,0,0,9.3,0,65,3,0,2,Did not bat
+21873,2,146,6505,0,0,0,0,10.0,0,80,2,1,0,Did not bat
+21873,2,146,9823,0,0,0,0,10.0,0,69,1,0,2,Did not bat
+21873,2,146,9363,0,0,0,0,10.0,0,56,2,0,0,Did not bat

@@ -1,0 +1,81 @@
+<style>
+body {
+  background-color: white;
+}
+
+h1 {
+  color: blue;
+  text-align: left;
+  font-size: 15px;
+  font-family: Consolas, sans-serif;
+}
+
+h2 {
+  color: darkblue;
+  text-align: left;
+  font-size: 25px;
+  font-family: Consolas, sans-serif;
+}
+
+h3 {
+  color: blue;
+  text-align: left;
+  font-size: large;
+  font-family: Consolas, sans-serif;
+}
+th {
+    color: darkblue;
+    font-family: Consolas, sans-serif;
+    font-size: 15px;
+    text-align: center;
+
+    border-style: inset;
+    border-color: bisque;
+}
+</style>
+{#<h1>Query Results</h1>#}
+{#{% if results %}#}
+{#    <ul>#}
+{#    {% for item in results|slice:":1" %}#}
+{#        <li>{% for k,v  in item.items%}#}
+{#            {{ k }}#}
+{#        {% endfor %}</li>#}
+{#        <br>#}
+{#    {% endfor %}#}
+{#    {% for item in results %}#}
+{#        <li>{% for k,v  in item.items    %}#}
+{#            {{ v }}#}
+{#        {% endfor %}</li>#}
+{#        <br>#}
+{#    {% endfor %}#}
+{#    </ul>#}
+{##}
+{#{% else %}#}
+{#    <p>No results are available.</p>#}
+{#{% endif %}#}
+{##}
+{##}
+
+<h2>Query Results</h2>
+
+
+{% if results %}
+    <h3>Fetched {{ results|length }} rows</h3>
+    <table>
+    <tr>{% for item in results|slice:":1" %}
+        {% for k,v  in item.items%}
+            <th><h1>{{ k }}</h1></th>
+        {% endfor %}
+    {% endfor %}</tr>
+    {% for item in results %}
+
+        <tr>{% for k,v  in item.items    %}
+               <th>{{ v }}</th>
+        {% endfor %}</tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No results are available.</p>
+{% endif %}
+
+

@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22445,1,12,13278,2,11,0,0,0,0,0,0,0,0,lbw b K Jarvis
+22445,1,12,9835,10,45,0,0,4.0,0,18,1,0,0,b Raza
+22445,1,12,10876,2,12,0,0,0,0,0,0,0,0,c Chakabva b Chatara
+22445,1,12,9829,8,18,1,0,0,0,0,0,0,0,c Chakabva b Chatara
+22445,1,12,9837,11,15,0,1,0,0,0,0,0,0,c Chakabva b Tiripano
+22445,1,12,12745,1,29,0,0,0,0,0,0,0,0,c Moor b Tiripano
+22445,1,12,13279,36,76,2,1,0,0,0,0,0,0,b Brandon Mavuta
+22445,1,12,10874,10,26,0,0,3.1,0,31,1,0,1,c Chakabva b Brandon Mavuta
+22445,1,12,9832,9,6,0,1,5.0,1,15,0,0,0,c Chakabva b Chatara
+22445,1,12,12746,7,24,0,0,6.0,0,30,0,0,0,b K Jarvis
+22445,1,12,10814,2,7,0,0,5.0,0,16,1,0,0,not out
+22445,2,7,9737,11,25,0,0,0,0,0,0,0,0,lbw b Qadeer Ahmed
+22445,2,7,781,38,63,5,0,0,0,0,0,0,0, b Imran Haider
+22445,2,7,6334,51,46,4,2,0,0,0,0,0,0,c Muhammad Usman b Mustafa
+22445,2,7,441,5,3,1,0,3.0,1,3,0,0,0,not out
+22445,2,7,782,4,2,0,0,0,0,0,0,0,0,not out
+22445,2,7,10195,0,0,0,0,0,0,0,0,0,0,Did not bat
+22445,2,7,9354,0,0,0,0,10.0,2,21,1,0,2,Did not bat
+22445,2,7,10066,0,0,0,0,8.0,3,18,2,0,3,Did not bat
+22445,2,7,2289,0,0,0,0,7.5,2,11,2,0,0,Did not bat
+22445,2,7,11224,0,0,0,0,6.0,0,30,2,0,2,Did not bat
+22445,2,7,6483,0,0,0,0,10.0,2,25,3,0,3,Did not bat

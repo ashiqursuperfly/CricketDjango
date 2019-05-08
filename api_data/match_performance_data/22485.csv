@@ -1,0 +1,23 @@
+match_id,innings_no,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition
+22485,1,58,7825,39,41,2,2,0,0,0,0,0,0,c Dhawan b Axar
+22485,1,58,158,0,9,0,0,0,0,0,0,0,0,c Axar b J Suchith
+22485,1,58,413,59,37,8,1,0,0,0,0,0,0,c Dhawan b J Suchith
+22485,1,58,265,44,22,4,3,0,0,0,0,0,0,not out
+22485,1,58,587,25,10,2,2,3.0,0,9,3,0,0,c & b Chris Morris
+22485,1,58,6311,5,2,1,0,0,0,0,0,0,0,not out
+22485,1,58,1851,0,0,0,0,0,0,0,0,0,0,Did not bat
+22485,1,58,242,0,0,0,0,3.0,0,18,0,0,0,Did not bat
+22485,1,58,7836,0,0,0,0,3.0,0,32,1,0,0,Did not bat
+22485,1,58,75,0,0,0,0,4.0,0,28,1,0,0,Did not bat
+22485,1,58,6667,0,0,0,0,3.2,0,12,4,0,0,Did not bat
+22485,2,61,12094,4,5,1,0,0,0,0,0,0,0,c Raina b D Chahar
+22485,2,61,1446,19,13,1,1,0,0,0,0,0,0, b Harbhajan
+22485,2,61,9428,44,31,4,1,0,0,0,0,0,0,st Dhoni b Ravindra Jadeja
+22485,2,61,10744,5,3,1,0,0,0,0,0,0,0,c DJ Bravo b Tahir
+22485,2,61,7664,1,5,0,0,0,0,0,0,0,0,lbw b Ravindra Jadeja
+22485,2,61,8808,9,9,1,0,3.0,0,31,1,0,0,c Watson b Tahir
+22485,2,61,13748,2,4,0,0,2.0,0,19,0,0,2,c D Chahar b Tahir
+22485,2,61,8333,0,1,0,0,4.0,0,47,1,1,1,st Dhoni b Ravindra Jadeja
+22485,2,61,10357,6,15,0,0,4.0,0,28,2,0,0,run out (Watson) 
+22485,2,61,1454,8,11,1,0,3.0,0,16,0,0,0,c Dhoni b Tahir
+22485,2,61,8117,1,1,0,0,4.0,0,37,0,0,2,not out
