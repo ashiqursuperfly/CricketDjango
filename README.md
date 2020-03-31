@@ -1,7 +1,7 @@
 ## CricketDjango
-### This project is **[Deprecated]** due to this API: https://www.cricbuzz.com/match-api/livematches.json being deprecated.
+#### This project is **[Deprecated]** due to this API: https://www.cricbuzz.com/match-api/livematches.json being deprecated.
 
-### Here's Demo of the data it collected:
+### Here's a Demo of the data it collected:
 
 #### Players Table
 |player_id|full_name          |nationality|bat_style|bowl_style           |speciality        |
