@@ -240,24 +240,24 @@ create table ball_by_ball_performance_data (
 alter table ball_by_ball_performance_data owner to postgres;
 
 
-DO $$
-  <<first_block>>
-  BEGIN
-    CREATE TEMP TABLE tmp_table ON COMMIT DROP AS
-    SELECT * FROM match_performance_data WITH NO DATA;
-    copy tmp_table FROM 'F:/Database/Database Project All/cric_final/match_performance_data/22248.csv' DELIMITER ',' CSV HEADER;
-    INSERT INTO match_performance_data SELECT DISTINCT ON (match_id,innings_no,player_id) * FROM tmp_table ON CONFLICT DO NOTHING;
-    COMMIT;
-  END first_block $$;
+--DO $$
+--  <<first_block>>
+--  BEGIN
+--    CREATE TEMP TABLE tmp_table ON COMMIT DROP AS
+--    SELECT * FROM match_performance_data WITH NO DATA;
+--    copy tmp_table FROM 'F:/Database/Database Project All/cric_final/match_performance_data/22248.csv' DELIMITER ',' CSV HEADER;
+--    INSERT INTO match_performance_data SELECT DISTINCT ON (match_id,innings_no,player_id) * FROM tmp_table ON CONFLICT DO NOTHING;
+--    COMMIT;
+--  END first_block $$;
 
 
 
 --call init_all_match_data();
 
 
-SELECT player_id,SUM(runs_scored),SUM(runs_conceded) FROM match_performance_data
-WHERE match_id = 21197
-GROUP BY player_id
-ORDER BY player_id;
+-- SELECT player_id,SUM(runs_scored),SUM(runs_conceded) FROM match_performance_data
+-- WHERE match_id = 21197
+-- GROUP BY player_id
+-- ORDER BY player_id;
 
-SELECT DISTINCT match_id FROM match_performance_data;
+-- SELECT DISTINCT match_id FROM match_performance_data;
